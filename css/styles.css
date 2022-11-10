@@ -656,6 +656,40 @@ body {
   margin-block: 10px;
 }
 
+.modal-title {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--main-color);
+  margin-bottom: 12px;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+  max-width: 576px;
+  margin-top: 40px;
+  margin-right: 40px;
+}
+
+/* .form-block {
+  display: block;
+  width: 100%;
+  max-width: 576px;
+  margin-top: 40px;
+  margin-right: 40px;
+} */
+
+.fieldset {
+  display: flex;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: -15px;
+}
+
 .close-btn {
   position: absolute;
   top: 8px;
