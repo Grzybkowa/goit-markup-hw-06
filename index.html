@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/modern-normalize/modern-normalize.css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -423,55 +423,62 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>X</button>
+
         <div class="form-block">
           <h4 class="modal-title">Zostaw swoje dane w formularzu poniej</h4>
-          <form>
+          <form class="my-form">
             <fieldset class="fieldset">
               <label class="label" for="name">Imię</label>
-              <svg width="18" height="18">
+              <svg class="icon" width="18" height="18">
                 <use href="./images/icons.svg#icon-person-black-18dp-1"></use>
               </svg>
-              <input class="modal-input" type="text" id="name" />
+              <input class="input" type="text" id="name" />
             </fieldset>
           </form>
-          <form>
-            <label for="phone">Telefon</label>
-            <svg width="18" height="18">
-              <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
-            </svg>
-            <input class="modal-input" type="text" id="name" />
+          <form class="my-form">
+            <fieldset class="fieldset">
+              <label class="label" for="phone">Telefon</label>
+              <svg class="icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-phone-black-18dp-1"></use>
+              </svg>
+              <input class="input" type="text" id="phone" />
+            </fieldset>
+          </form>
+          <form class="my-form">
+            <fieldset class="fieldset">
+              <label class="label" for="email">Email</label>
+              <svg class="icon" width="18" height="18">
+                <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
+              </svg>
+              <input class="input" type="text" id="email" />
+            </fieldset>
+          </form>
+          <form class="my-form">
+            <fieldset class="fieldset">
+              <label class="label" for="comment">Komentarz</label>
+              <input
+                class="input placeholder"
+                type="text"
+                id="comment"
+                placeholder="Wprowadź tekst"
+              />
+            </fieldset>
+          </form>
+          <form class="my-form">
+            <input type="checkbox" />
+            <label class="checkbox-text" for="checkbox-text"
+              >Oświadczam iz akceptuję
+              <a class="link" href="Regulamin">Regulamin</a> i
+              <a class="link" href="Politykę prywatności"
+                >Politykę prywatności</a
+              >
+            </label>
+
+            <button class="modal-btn" type="button">Wyślij</button>
           </form>
         </div>
       </div>
     </div>
-
-    <!-- <div class="modal-content">
-        <form>
-          <fieldset>
-            <label for="name">Imię</label>
-            <svg width="18" height="18">
-              <use href="./images/icons.svg#icon-email-black-18dp-1"></use>
-            </svg>
-            <input class="modal-input" type="text" id="name" />
-          </fieldset>  -->
-    <!-- <fieldset>
-            <label for="phone">Telefon</label>
-
-            <input type="tel" id="phone" />
-          </fieldset>
-          <fieldset>
-            <label for="mail">E-mail</label>
-
-            <input type="email" id="mail" />
-          </fieldset>
-          <label class="legal-checkbox">
-            <input type="checkbox" id="legal" placeholder="Wprowadź tekst" />
-            Komentarz
-          </label>
-          <fieldset>
-            <input class="textarea" type="textarea" />
-          </fieldset>
-        </form> -->
 
     <script src="./js/modal.js"></script>
   </body>
