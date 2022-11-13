@@ -336,12 +336,6 @@ body {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* .main-img-box:hover,
-.main-img-box-focus {
-  box-shadow: 0px 4px 4px 0px #00000040, 0px 2px 1px 0px #00000033,
-    0px 1px 1px 0px #00000024, 0px 1px 3px 0px #0000001f;
-} */
-
 .description-title {
   font-size: 14px;
   font-weight: 700;
@@ -449,6 +443,7 @@ body {
 }
 
 .footer-input {
+  outline: none;
   height: 50px;
   width: 358px;
   border-radius: 4px;
@@ -456,6 +451,10 @@ body {
   color: #ffffff99;
   background: var(--tertiary-color);
   padding-left: 16px;
+}
+
+.footer-input:focus {
+  border-color: var(--primary-color);
 }
 
 .social-icons-footer {
@@ -486,12 +485,16 @@ body {
   gap: 24px;
 }
 
-/* =============== END FOOTER =============== */
+.footer-form-block:has(input:focus) {
+  border-color: var(--primary-color);
+}
 
 .display-flex-icons {
   display: flex;
   gap: 10px;
 }
+
+/* =============== END FOOTER =============== */
 
 .row {
   display: flex;
@@ -706,37 +709,24 @@ body {
 }
 
 .checkbox-text {
+  display: flex;
+  align-items: center;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-align: left;
   color: var(--quinary-color);
+  justify-content: center;
 }
 
 .checkbox-fieldset {
-  display: flex;
-  align-items: center;
   max-width: 448px;
   width: 100%;
-  justify-content: center;
   background-size: cover;
   margin: 0 auto;
   border: none;
-  gap: 8px;
+  padding: 0;
   margin-bottom: 30px;
-}
-
-.checkbox {
-  width: 16px;
-  height: 15px;
-  background: var(--secondary-color);
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; */
-  border: 2px solid var(--first-dark);
-  fill: var(--main-color);
-  box-shadow: 0px 4px 4px 0px #00000040;
-  border-radius: 2px;
 }
 
 .my-form .input {
@@ -745,6 +735,7 @@ body {
   opacity: 20%;
   background-color: transparent;
   outline: none;
+  width: 100%;
 }
 
 .my-form .placeholder {
@@ -778,6 +769,54 @@ body {
   align-items: center;
   border-radius: 4px;
   padding: 0;
+}
+
+.checkbox-fieldset input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.checkmark {
+  width: 16px;
+  height: 15px;
+  border: 2px solid var(--main-color);
+  border-radius: 2px;
+  display: block;
+  margin-right: 8px;
+}
+
+.checkmark > svg {
+  display: none;
+}
+
+.checkbox-fieldset .checkbox:checked + .checkmark {
+  border: 0;
+}
+
+.checkbox-fieldset .checkbox:checked + .checkmark > svg {
+  display: block;
+}
+
+.fieldset:has(input:focus) {
+  border-color: var(--primary-color);
+  transition-property: border color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fieldset:has(input:focus) .icon {
+  fill: var(--primary-color);
+  transition-property: input icon;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.fieldset:has(textarea:focus) {
+  border-color: var(--primary-color);
+  transition-property: border color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link {
