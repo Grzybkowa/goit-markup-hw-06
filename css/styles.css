@@ -106,7 +106,7 @@ body {
   display: inline-flex;
   align-items: center;
   transition-duration: 250ms;
-  transition-property: fill, color;
+  transition-property: color, fill;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -706,6 +706,7 @@ body {
   letter-spacing: 0.01em;
   text-align: left;
   color: var(--quinary-color);
+  vertical-align: top;
 }
 
 .checkbox-text {
@@ -769,6 +770,9 @@ body {
   align-items: center;
   border-radius: 4px;
   padding: 0;
+  transition-property: border-color, fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .checkbox-fieldset input {
@@ -800,23 +804,15 @@ body {
 
 .fieldset:has(input:focus) {
   border-color: var(--primary-color);
-  transition-property: border color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  
 }
 
 .fieldset:has(input:focus) .icon {
   fill: var(--primary-color);
-  transition-property: input icon;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fieldset:has(textarea:focus) {
   border-color: var(--primary-color);
-  transition-property: border color;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link {
